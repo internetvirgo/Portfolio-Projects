@@ -64,6 +64,49 @@ where continent is not null
 --Group by date
 order by 1,2
 
+--- total death count per continent 
+
+SELECT SUM(new_cases) as TotalCases, SUM(cast(new_deaths as int)) as TotalDeaths, SUM(cast(new_deaths as int))/SUM(new_cases)*100 as DeathPercentage --total_deaths, (total_deaths/total_cases) * 100 as DeathPercentage
+FROM dbo.CovidDeaths
+--Where location like '%states'
+where continent = 'Asia'
+--Group by date
+order by 1,2
+
+SELECT SUM(new_cases) as TotalCases, SUM(cast(new_deaths as int)) as TotalDeaths, SUM(cast(new_deaths as int))/SUM(new_cases)*100 as DeathPercentage --total_deaths, (total_deaths/total_cases) * 100 as DeathPercentage
+FROM dbo.CovidDeaths
+--Where location like '%states'
+where continent = 'Africa'
+--Group by date
+order by 1,2
+
+SELECT SUM(new_cases) as TotalCases, SUM(cast(new_deaths as int)) as TotalDeaths, SUM(cast(new_deaths as int))/SUM(new_cases)*100 as DeathPercentage --total_deaths, (total_deaths/total_cases) * 100 as DeathPercentage
+FROM dbo.CovidDeaths
+--Where location like '%states'
+where continent = 'Europe'
+--Group by date
+order by 1,2
+
+SELECT SUM(new_cases) as TotalCases, SUM(cast(new_deaths as int)) as TotalDeaths, SUM(cast(new_deaths as int))/SUM(new_cases)*100 as DeathPercentage --total_deaths, (total_deaths/total_cases) * 100 as DeathPercentage
+FROM dbo.CovidDeaths
+--Where location like '%states'
+where continent = 'North America'
+--Group by date
+order by 1,2
+
+SELECT SUM(new_cases) as TotalCases, SUM(cast(new_deaths as int)) as TotalDeaths, SUM(cast(new_deaths as int))/SUM(new_cases)*100 as DeathPercentage --total_deaths, (total_deaths/total_cases) * 100 as DeathPercentage
+FROM dbo.CovidDeaths
+--Where location like '%states'
+where continent = 'South America'
+--Group by date
+order by 1,2
+
+SELECT SUM(new_cases) as TotalCases, SUM(cast(new_deaths as int)) as TotalDeaths, SUM(cast(new_deaths as int))/SUM(new_cases)*100 as DeathPercentage --total_deaths, (total_deaths/total_cases) * 100 as DeathPercentage
+FROM dbo.CovidDeaths
+--Where location like '%states'
+where continent = 'Oceania'
+--Group by date
+order by 1,2
 
 --Looking at total population vs vaccinations
 
